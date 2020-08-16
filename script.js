@@ -25,7 +25,7 @@ const meetformCall = document.querySelector('#meet-call');
                 time: meetformCall.time.value,
                 payment:"not completed"
                 });
-                window.location.replace("../HTML/payment.html");
+                window.location.replace("payment.html");
             })
             
             
@@ -41,7 +41,7 @@ const meetformCall = document.querySelector('#meet-call');
             time: skypeformCall.time.value,
             payment:"not completed"
             });
-            window.location.replace("../HTML/payment.html");
+            window.location.replace("payment.html");
         })
         
         
@@ -56,7 +56,7 @@ const meetformCall = document.querySelector('#meet-call');
             time: zoomformCall.time.value,
             payment:"not completed"
         });
-        window.location.replace("../HTML/payment.html");
+        window.location.replace("payment.html");
         })
         
         
@@ -71,7 +71,7 @@ const meetformCall = document.querySelector('#meet-call');
             time: whatsappformCall.time.value,
             payment:"not completed"
         });
-        window.location.replace("../HTML/payment.html");
+        window.location.replace("payment.html");
         })
         
         
@@ -113,6 +113,6 @@ const meetformCall = document.querySelector('#meet-call');
         
         }else{
             alert("user not signed in. Login First");
-            window.location.replace("../HTML/login.html");
+            window.location.replace("login.html");
         }
     })  
