@@ -2,7 +2,7 @@
     position: absolute;
     width: 94vw;
     left: 3vw;
-    top: 35vh;
+    top: 40vh;
     display: grid;
     grid-template-columns: auto auto;
 
@@ -23,7 +23,7 @@
 #switch{
     position: absolute;
     left: 1em;
-    top: 30vh;
+    top: 35vh;
     padding: 0.3em;
     text-transform: capitalize;
     background-color:tomato;
