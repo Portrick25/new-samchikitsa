@@ -12,7 +12,7 @@ body{
     grid-template-columns: auto auto;
     width: 100%;
     background-color: rgb(240, 242, 247);
-    height: 25vh;
+    height: 30vh;
 }
 .brand{
     text-align: right;
