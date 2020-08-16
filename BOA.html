@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+    <script src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="boa.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samchikitsa Signup</title>
+</head>
+<body>
+
+<div class="PC"> 
+    <img class="avatar" src="avatar.png" alt="" srcset="">  
+        <div class="account-detail">
+            <div class="account-detail-content"><a href="#">My Profile</a></div>
+            <div class="account-detail-content"><a href="#">Edit User</a></div>
+            <div class="account-detail-content"><a href="#">Settings</a></div>
+        </div>    
+    <div class="header">
+        <div class="brand"><img class="brand-img" src="logo.png" alt="logo"></div>
+        <div class="sam-title">
+        <h3> SAMCHIKITSA </h3>
+        <b id="btext"></b>
+        </div>
+    </div>
+        <nav>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="about.html" >About Us</a>
+            <a class="nav-link" href="#">Testemonials</a>
+            <a class="nav-link" href="#">Upcoming Services</a>
+            <a class="nav-link" href="index.html" id="services-new">Our Services</a>   
+        </nav>
+    </div>
+<h2 id="appointment">Book An Offline Appointment</h2>
+<!--BLOCK CONTENT-->
+
+
+    <div class="signup-grid-container1">
+        <div class="boagridcontent">
+            <div id="formcontainer-signup">
+                <form action="" method="post" id="zoomuseroff">
+                    <input type="text" placeholder="Enter Your Name" id="name" name ="name" required><br>
+                    <label for="city">In which city you want to book ab appointment</label><br>
+                    <select name="city" id="city" required>
+                        <option value="none" >LOCATION</option>
+                        <option value="noida">NOIDA</option>
+                        <option value="delhi">NEW DELHI</option>
+                        <option value="graeter noida">GREATER NOIDA</option>
+                        <option value="ghaziabad">GHAZIABAD</option>
+                        <option value="gg">GURUGRAM</option>
+                    </select><br>
+                    <label for="clinic">List of Associated clinic near you</label><br>
+                    <select name="clinic" id="clinic" required>
+                        <option value="none" >LOCATION</option>
+                    </select><br>
+                    <label for="date">Pick Date</label><br>
+                    <input type="date" name="date" placeholder=""><br>
+                    <label for="time">Pick Time</label><br>
+                    <input type="time" name="time" placeholder="Pick Time"><br>
+                    <button type="submit">Submit</button><br>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--BLOCK CONTENT END-->
+</div>
+<script>
+        var i = 0;
+        var txt = 'Serving Complete Health & Well Being';
+        var speed = 50;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("btext").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+
+    function switchbtn(){
+        var a = document.getElementById("call");
+        var b = document.getElementById("chat");
+        var c = document.getElementById("switch");
+        var d = document.getElementById("medium");
+        if(b.style.display == "none"){
+            c.innerHTML = "book for call";
+            c.style.backgroundColor = "rgb(7, 6, 87)";
+            d.innerHTML = "chat";
+            b.style.display = "block";
+            a.style.display = "none";
+        }else{
+            c.innerHTML = "book for chat"
+            c.style.backgroundColor = "tomato";
+            d.innerHTML = "voice call"
+            b.style.display = "none";
+            a.style.display = "block";
+        }
+    }
+    function myfunction(){
+        var a = document.getElementById("menubar-content");
+        var b = document.getElementById("services");
+        var c = document.getElementById("contact-menubar-content")
+        if(a.style.display == "none"){
+            a.style.display = "block";
+            b.style.display="none";
+            c.style.display = "none"
+        }
+        else{
+            a.style.display = "none";
+            b.style.display = "block";
+        }
+
+    }
+
+    function myfunction1(){
+        var a = document.getElementById("contact-menubar-content");
+        var b = document.getElementById("services");
+        var c = document.getElementById("menubar-content")
+    
+        if(a.style.display == "none"){
+            a.style.display = "block";
+            b.style.display="none";
+            c.style.display="none";
+        }
+        else{
+            a.style.display = "none";
+            b.style.display = "none";
+            c.style.display="block";
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
+

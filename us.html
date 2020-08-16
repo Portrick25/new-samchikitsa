@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" href="../IMAGES/logo.png">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <link rel="stylesheet" href="../CSS/signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samchikitsa</title>
+</head>
+<body>
+
+    <div class="PC">
+        <img class="avatar" src="../IMAGES/avatar.png" alt="" srcset="">  
+        <div class="account-detail">
+            <div class="account-detail-content"><a href="#">My Profile</a></div>
+            <div class="account-detail-content"><a href="#">Edit User</a></div>
+            <div class="account-detail-content"><a href="#">Settings</a></div>
+        </div>  
+        <div class="header">
+            <div class="brand"><img class="brand-img" src="../IMAGES/logo.png" alt="logo"></div>
+            <div class="sam-title">
+                <h3> SAMCHIKITSA </h3>
+                <div style="margin-top: -1.2em;">
+                <b id="btext"></b>
+            </div>
+            </div>
+        </div>
+            <nav>
+                <a class="nav-link" href="main.html">Home</a>
+                <a class="nav-link" href="../HTML/about.html" >About Us</a>
+                <a class="nav-link" href="../HTML/testimonial.html">Testemonials</a>
+                <a class="nav-link active" href="../html/us.html">Upcoming Services</a>
+                <a class="nav-link" href="signup.html">Join Us</a>
+                <a class="nav-link" href="login.html">Login</a>
+                
+            </nav>
+        </div>
+   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+    <script>
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 5000); // Change image every 2 seconds
+        }
+    </script>
+    <script>
+        var i = 0;
+        var txt = 'Serving Complete Health & Well Being';
+        var speed = 50;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("btext").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+        }
+    </script>
+</body>
+</html>
+

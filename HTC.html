@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+    <script src="app.js"></script>
+    <link href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" rel="Stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="boa.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samchikitsa Signup</title>
+</head>
+<body>
+
+<div class="PC">
+    <img class="avatar" src="avatar.png" alt="" srcset="">  
+        <div class="account-detail">
+            <div class="account-detail-content"><a href="#">My Profile</a></div>
+            <div class="account-detail-content"><a href="#">Edit User</a></div>
+            <div class="account-detail-content"><a href="#">Settings</a></div>
+        </div>     
+    <div class="header">
+        <div class="brand"><img class="brand-img" src="logo.png" alt="logo"></div>
+        <div class="sam-title">
+        <h3> SAMCHIKITSA </h3>
+        <b id="btext"></b>
+        </div>
+    </div>
+        <nav>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="about.html" >About Us</a>
+            <a class="nav-link" href="dyds.html">Testemonials</a>
+            <a class="nav-link" href="dyds.html">Upcoming Services</a>
+            <a class="nav-link" href="login.html" id="services-new">Our Services</a>   
+        </nav>
+    </div>
+<button onclick="switchbtn()" id="switch">book for chat</button>
+<h2 id="appointment">Book Appointment for <span id="medium">call</span></h2>
+<!--BLOCK CONTENT-->
+<div id="call">
+    <div class="signup-grid-container">
+        <div class="boagridcontent">
+            <h3>with meet</h3>
+            <div id="formcontainer-signup">
+                <form action="" method="post" id="meet-call">
+                    <img src="meet.png" alt="" style="width: 2cm;"><br>
+                    <input type="text" placeholder="Enter Your Name" id="name" name ="name" required><br>
+                    <input type="text" placeholder="Enter Your Google Meet ID" name="meetid"><br>
+                    <label for="date">Pick Date</label><br>
+                    <input type="text" name="date" id="txtdate" placeholder=""><br>
+                    <label for="time">Pick Time</label><br>
+                    <select name="time" id="time" required>
+                        <option value="" disabled >select</option>
+                        <option value="" >09:30 AM - 09:45 AM</option>
+                        <option value="">09:45 AM - 10:00 PM </option>
+                        <option value="" >10:00 AM - 10:15 AM</option>
+                        <option value="">10:15 AM - 10:30 PM </option>
+                        <option value="" >10:30 PM - 10:45 AM</option>
+                        <option value="">10:45 AM- 11:00 AM </option>
+                        <option value="">11:00 AM - 11:15 AM</option>
+                        <option value="">11:15 AM - 11:30 AM</option>
+                        <option value="">11:30 AM - 11:45 AM</option>
+                        <option value="">11:45 AM - 12:00 PM</option>
+                        <option value="">12:00 PM - 12:15 PM</option>
+                        <option value="">12:15 PM - 12:30 PM</option>
+                        <option value="">12:30 PM - 12:45 PM</option>
+                        <option value="">12:45 PM - 01:00 PM</option>
+                        <option value="">01:00 PM - 01:15 PM</option>
+                        <option value="">01:15 PM - 01:30 PM</option>
+                        <option value="">01:30 PM - 01:45 PM</option>
+                        <option value="">01:45 PM - 02:00 PM</option>
+                        <option value="">02:00 PM - 02:15 PM</option>
+                        <option value="">02:15 PM - 02:30 PM</option>
+                        <option value="">02:30 PM - 02:45 PM</option>
+                        <option value="">02:45 PM - 03:00 PM</option>
+                        <option value="">03:00 PM - 03:15 PM</option>
+                        <option value="">03:15 PM - 03:30 PM</option>
+                        <option value="">03:30 PM - 03:45 PM</option>
+                        <option value="">03:45 PM - 04:00 PM</option>
+                        <option value="">04:00 PM - 04:15 PM</option>
+                        <option value="">04:15 PM - 04:30 PM</option>
+                        <option value="">04:30 PM - 04:45 PM</option>
+                        <option value="">04:45 PM - 05:00 PM</option>
+                        <option value="">05:00 PM - 05:15 PM</option>
+                        <option value="">05:15 PM - 05:30 PM</option>
+                        <option value="">05:30 PM - 05:45 PM</option>
+                        <option value="">05:45 PM - 06:00 PM</option>
+                    </select><br>
+                    <button type="submit">Submit</button><br>
+                </form>
+            </div>
+        </div>
+
+        <div class="boagridcontent">
+            <h3>with zoom</h3>
+            <div id="formcontainer-signup">
+                <form action="" method="post" id="zoomuser-call">
+                    <img src="zoom.png" alt="" style="width: 2cm;"><br>
+                    <input type="text" placeholder="Enter Your Name" id="name" name ="name" required><br>
+                    <input type="text" placeholder="Enter Your Zoom ID" name="zoomuserid"><br>
+                    <label for="date">Pick Date</label><br>
+                    <input type="text" name="date" id="txtdate" placeholder=""><br>
+                    <label for="time">Pick Time</label><br>
+                    <select name="time" id="time" required>
+                        <option value="" disabled >select</option>
+                        <option value="" >09:30 AM - 09:45 AM</option>
+                        <option value="">09:45 AM - 10:00 PM </option>
+                        <option value="" >10:00 AM - 10:15 AM</option>
+                        <option value="">10:15 AM - 10:30 PM </option>
+                        <option value="" >10:30 PM - 10:45 AM</option>
+                        <option value="">10:45 AM- 11:00 AM </option>
+                        <option value="">11:00 AM - 11:15 AM</option>
+                        <option value="">11:15 AM - 11:30 AM</option>
+                        <option value="">11:30 AM - 11:45 AM</option>
+                        <option value="">11:45 AM - 12:00 PM</option>
+                        <option value="">12:00 PM - 12:15 PM</option>
+                        <option value="">12:15 PM - 12:30 PM</option>
+                        <option value="">12:30 PM - 12:45 PM</option>
+                        <option value="">12:45 PM - 01:00 PM</option>
+                        <option value="">01:00 PM - 01:15 PM</option>
+                        <option value="">01:15 PM - 01:30 PM</option>
+                        <option value="">01:30 PM - 01:45 PM</option>
+                        <option value="">01:45 PM - 02:00 PM</option>
+                        <option value="">02:00 PM - 02:15 PM</option>
+                        <option value="">02:15 PM - 02:30 PM</option>
+                        <option value="">02:30 PM - 02:45 PM</option>
+                        <option value="">02:45 PM - 03:00 PM</option>
+                        <option value="">03:00 PM - 03:15 PM</option>
+                        <option value="">03:15 PM - 03:30 PM</option>
+                        <option value="">03:30 PM - 03:45 PM</option>
+                        <option value="">03:45 PM - 04:00 PM</option>
+                        <option value="">04:00 PM - 04:15 PM</option>
+                        <option value="">04:15 PM - 04:30 PM</option>
+                        <option value="">04:30 PM - 04:45 PM</option>
+                        <option value="">04:45 PM - 05:00 PM</option>
+                        <option value="">05:00 PM - 05:15 PM</option>
+                        <option value="">05:15 PM - 05:30 PM</option>
+                        <option value="">05:30 PM - 05:45 PM</option>
+                        <option value="">05:45 PM - 06:00 PM</option>
+                    </select><br>
+                    <button type="submit">Submit</button><br>
+                </form>
+            </div>
+        </div>
+
+        <div class="boagridcontent">
+            <h3>with skype</h3>
+            <div id="formcontainer-signup">
+                <form action="" id="skypeuser-call">
+                    <img src="skype.png" alt="" style="width: 3cm;"><br>
+                    <input type="text" placeholder="Enter Your Name" id="name" name ="name" required><br>
+                    <input type="text" placeholder="Enter Your Skype ID" name="skypeuserid"><br>
+                    <label for="date">Pick Date</label><br>
+                    <input type="text" name="date" id="txtdate4" placeholder=""><br>
+                    <label for="time">Pick Time</label><br>
+                    <select name="time" id="time" required>
+                        <option value="" >09:30 AM - 09:45 AM</option>
+                        <option value="">09:45 AM - 10:00 PM </option>
+                        <option value="" >10:00 AM - 10:15 AM</option>
+                        <option value="">10:15 AM - 10:30 PM </option>
+                        <option value="" >10:30 PM - 10:45 AM</option>
+                        <option value="">10:45 AM- 11:00 AM </option>
+                        <option value="">11:00 AM - 11:15 AM</option>
+                        <option value="">11:15 AM - 11:30 AM</option>
+                        <option value="">11:30 AM - 11:45 AM</option>
+                        <option value="">11:45 AM - 12:00 PM</option>
+                        <option value="">12:00 PM - 12:15 PM</option>
+                        <option value="">12:15 PM - 12:30 PM</option>
+                        <option value="">12:30 PM - 12:45 PM</option>
+                        <option value="">12:45 PM - 01:00 PM</option>
+                        <option value="">01:00 PM - 01:15 PM</option>
+                        <option value="">01:15 PM - 01:30 PM</option>
+                        <option value="">01:30 PM - 01:45 PM</option>
+                        <option value="">01:45 PM - 02:00 PM</option>
+                        <option value="">02:00 PM - 02:15 PM</option>
+                        <option value="">02:15 PM - 02:30 PM</option>
+                        <option value="">02:30 PM - 02:45 PM</option>
+                        <option value="">02:45 PM - 03:00 PM</option>
+                        <option value="">03:00 PM - 03:15 PM</option>
+                        <option value="">03:15 PM - 03:30 PM</option>
+                        <option value="">03:30 PM - 03:45 PM</option>
+                        <option value="">03:45 PM - 04:00 PM</option>
+                        <option value="">04:00 PM - 04:15 PM</option>
+                        <option value="">04:15 PM - 04:30 PM</option>
+                        <option value="">04:30 PM - 04:45 PM</option>
+                        <option value="">04:45 PM - 05:00 PM</option>
+                        <option value="">05:00 PM - 05:15 PM</option>
+                        <option value="">05:15 PM - 05:30 PM</option>
+                        <option value="">05:30 PM - 05:45 PM</option>
+                        <option value="">05:45 PM - 06:00 PM</option>
+                    </select><br>
+                    <button type="submit">Submit</button><br>
+                </form>
+            </div>
+        </div>
+
+        <div class="boagridcontent">
+            <h3>with whatsapp</h3>
+            <div id="formcontainer-signup">
+                <form action="" id="whatsappuser-call">
+                    <img src="whatsapp.png" alt="" style="width: 2cm;"><br>
+                    <input type="text" placeholder="Enter Your Name" id="name" name ="name" required><br>
+                    <input type="text" placeholder="Enter Your whatsapp Number" name="Wno"><br>
+                    <label for="date">Pick Date</label><br>
+                    <input type="text" name="date" id="txtdate1" placeholder=""><br>
+                    <label for="time">Pick Time</label><br>
+                    <select name="time" id="time" required>
+                        <option value="" >09:30 AM - 09:45 AM</option>
+                        <option value="">09:45 AM - 10:00 PM </option>
+                        <option value="" >10:00 AM - 10:15 AM</option>
+                        <option value="">10:15 AM - 10:30 PM </option>
+                        <option value="" >10:30 PM - 10:45 AM</option>
+                        <option value="">10:45 AM- 11:00 AM </option>
+                        <option value="">11:00 AM - 11:15 AM</option>
+                        <option value="">11:15 AM - 11:30 AM</option>
+                        <option value="">11:30 AM - 11:45 AM</option>
+                        <option value="">11:45 AM - 12:00 PM</option>
+                        <option value="">12:00 PM - 12:15 PM</option>
+                        <option value="">12:15 PM - 12:30 PM</option>
+                        <option value="">12:30 PM - 12:45 PM</option>
+                        <option value="">12:45 PM - 01:00 PM</option>
+                        <option value="">01:00 PM - 01:15 PM</option>
+                        <option value="">01:15 PM - 01:30 PM</option>
+                        <option value="">01:30 PM - 01:45 PM</option>
+                        <option value="">01:45 PM - 02:00 PM</option>
+                        <option value="">02:00 PM - 02:15 PM</option>
+                        <option value="">02:15 PM - 02:30 PM</option>
+                        <option value="">02:30 PM - 02:45 PM</option>
+                        <option value="">02:45 PM - 03:00 PM</option>
+                        <option value="">03:00 PM - 03:15 PM</option>
+                        <option value="">03:15 PM - 03:30 PM</option>
+                        <option value="">03:30 PM - 03:45 PM</option>
+                        <option value="">03:45 PM - 04:00 PM</option>
+                        <option value="">04:00 PM - 04:15 PM</option>
+                        <option value="">04:15 PM - 04:30 PM</option>
+                        <option value="">04:30 PM - 04:45 PM</option>
+                        <option value="">04:45 PM - 05:00 PM</option>
+                        <option value="">05:00 PM - 05:15 PM</option>
+                        <option value="">05:15 PM - 05:30 PM</option>
+                        <option value="">05:30 PM - 05:45 PM</option>
+                        <option value="">05:45 PM - 06:00 PM</option>
+                    </select><br>
+                    <button type="submit">Submit</button><br>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="chat" style="display: none;">
+    <div class="signup-grid-container">
+        <div class="boagridcontent">
+            <h3>with whatsapp</h3>
+            <div id="formcontainer-signup">
+                <form action="" id="whatsappuser-chat">
+                    <img src="whatsapp.png" alt="" style="width: 2cm;"><br>
+                    <input type="text" placeholder="Enter Your Name" id="name" name ="name" required><br>
+                    <input type="text" placeholder="Enter Your whatsapp Number" name="Wno"><br>
+                    <label for="date">Pick Date</label><br>
+                    <input type="text" name="date" id="txtdate3" placeholder=""><br>
+                    <label for="time">Pick Time</label><br>
+                    <select name="time" id="time" required>
+                        <option value="" >09:30 AM - 09:45 AM</option>
+                        <option value="">09:45 AM - 10:00 PM </option>
+                        <option value="" >10:00 AM - 10:15 AM</option>
+                        <option value="">10:15 AM - 10:30 PM </option>
+                        <option value="" >10:30 PM - 10:45 AM</option>
+                        <option value="">10:45 AM- 11:00 AM </option>
+                        <option value="">11:00 AM - 11:15 AM</option>
+                        <option value="">11:15 AM - 11:30 AM</option>
+                        <option value="">11:30 AM - 11:45 AM</option>
+                        <option value="">11:45 AM - 12:00 PM</option>
+                        <option value="">12:00 PM - 12:15 PM</option>
+                        <option value="">12:15 PM - 12:30 PM</option>
+                        <option value="">12:30 PM - 12:45 PM</option>
+                        <option value="">12:45 PM - 01:00 PM</option>
+                        <option value="">01:00 PM - 01:15 PM</option>
+                        <option value="">01:15 PM - 01:30 PM</option>
+                        <option value="">01:30 PM - 01:45 PM</option>
+                        <option value="">01:45 PM - 02:00 PM</option>
+                        <option value="">02:00 PM - 02:15 PM</option>
+                        <option value="">02:15 PM - 02:30 PM</option>
+                        <option value="">02:30 PM - 02:45 PM</option>
+                        <option value="">02:45 PM - 03:00 PM</option>
+                        <option value="">03:00 PM - 03:15 PM</option>
+                        <option value="">03:15 PM - 03:30 PM</option>
+                        <option value="">03:30 PM - 03:45 PM</option>
+                        <option value="">03:45 PM - 04:00 PM</option>
+                        <option value="">04:00 PM - 04:15 PM</option>
+                        <option value="">04:15 PM - 04:30 PM</option>
+                        <option value="">04:30 PM - 04:45 PM</option>
+                        <option value="">04:45 PM - 05:00 PM</option>
+                        <option value="">05:00 PM - 05:15 PM</option>
+                        <option value="">05:15 PM - 05:30 PM</option>
+                        <option value="">05:30 PM - 05:45 PM</option>
+                        <option value="">05:45 PM - 06:00 PM</option>
+                    </select><br>
+                    <button type="submit">Submit</button><br>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--BLOCK CONTENT END-->
+</div>
+
+<script>
+        var i = 0;
+        var txt = 'Serving Complete Health & Well Being';
+        var speed = 50;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("btext").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+
+    function switchbtn(){
+        var a = document.getElementById("call");
+        var b = document.getElementById("chat");
+        var c = document.getElementById("switch");
+        var d = document.getElementById("medium");
+        if(b.style.display == "none"){
+            c.innerHTML = "book for call";
+            c.style.backgroundColor = "rgb(7, 6, 87)";
+            d.innerHTML = "chat";
+            b.style.display = "block";
+            a.style.display = "none";
+        }else{
+            c.innerHTML = "book for chat"
+            c.style.backgroundColor = "tomato";
+            d.innerHTML = "voice call"
+            b.style.display = "none";
+            a.style.display = "block";
+        }
+    }
+    function myfunction(){
+        var a = document.getElementById("menubar-content");
+        var b = document.getElementById("services");
+        var c = document.getElementById("contact-menubar-content")
+        if(a.style.display == "none"){
+            a.style.display = "block";
+            b.style.display="none";
+            c.style.display = "none"
+        }
+        else{
+            a.style.display = "none";
+            b.style.display = "block";
+        }
+
+    }
+
+    function myfunction1(){
+        var a = document.getElementById("contact-menubar-content");
+        var b = document.getElementById("services");
+        var c = document.getElementById("menubar-content")
+    
+        if(a.style.display == "none"){
+            a.style.display = "block";
+            b.style.display="none";
+            c.style.display="none";
+        }
+        else{
+            a.style.display = "none";
+            b.style.display = "none";
+            c.style.display="block";
+        }
+
+    }
+
+
+</script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script language="javascript">
+    $(document).ready(function () {
+        $("#txtdate").datepicker({
+            minDate: 0,
+            beforeShowDay: $.datepicker.noWeekends
+
+        });
+    });
+    $(document).ready(function () {
+        $("#txtdate1").datepicker({
+            minDate: 0,
+            beforeShowDay: $.datepicker.noWeekends
+
+        });
+    });
+    $(document).ready(function () {
+        $("#txtdate2").datepicker({
+            minDate: 0,
+            beforeShowDay: $.datepicker.noWeekends
+
+        });
+    });
+    $(document).ready(function () {
+        $("#txtdate3").datepicker({
+            minDate: 0,
+            beforeShowDay: $.datepicker.noWeekends
+
+        });
+    });
+    $(document).ready(function () {
+        $("#txtdate4").datepicker({
+            minDate: 0,
+            beforeShowDay: $.datepicker.noWeekends
+
+        });
+    });
+</script>
+<script src="script.js"></script>
+</body>
+</html>
+

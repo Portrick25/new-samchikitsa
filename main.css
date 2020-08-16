@@ -1,0 +1,453 @@
+*{
+    margin: 0;
+}
+.mobile{
+    display: none;
+}
+body{
+    background-color:whitesmoke ;
+}
+.header{
+    display: grid;
+    grid-template-columns: auto auto;
+    width: 100%;
+    background-color: rgb(240, 242, 247);
+    height: 25vh;
+    border-bottom: solid black 1px;
+}
+.brand{
+    text-align: right;
+    padding-right: 1em;
+    margin-top: 1em;
+}
+.sam-title{
+    margin-top: 1em;
+    padding-left: 1em;
+    text-align: left;
+}
+.brand-img{
+    width: 3.5cm;
+    height: 3cm;
+}
+.header h3{
+    font-size: 3.8em;
+    color: tomato;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.header b{
+    font-size:1.2em;
+    color:white;
+    background-color: rgb(11, 11, 90);
+    padding:0 .5cm 0.1cm .5cm;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+
+}
+
+nav{
+    position: absolute;
+    width: 100%;
+    background-color:rgb(27, 9, 110);
+    left:;
+    top: 30%;
+    text-align: center;
+    padding:;
+}
+.avatar{
+    position: absolute;
+    right: 5%;
+    top: 8%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+}
+.account-detail{
+    display: none;
+    position: absolute;
+    right: 7%;
+    top: 15%;
+    width: auto;
+    background-color: white;
+    
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    border-radius: 5px;
+    z-index: 1;
+}
+.account-detail-content{
+    padding: 0.5em;
+    border: solid grey 1px;
+}
+.account-detail a{
+    color:rgb(11, 11, 90) ;
+    text-decoration: none;
+}
+.account-detail-content:hover ,.account-detail a:hover{
+    color: white;
+    background-color:rgb(11, 11, 90) ;
+    text-decoration: none;
+}
+
+
+.avatar:hover + .account-detail,.account-detail:hover{ 
+    display: block;
+
+
+}
+.nav-link{
+    color: white;
+    text-decoration: none;
+    width: 25%;
+    padding:0.2cm 0.5cm 0.2cm 0.5cm;
+    text-align: center;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+}
+.active{
+    color: yellow;
+    background-color: tomato;
+}
+
+.nav-link a{
+    color: white;
+    text-decoration: none;
+}
+
+.header a:hover, .nav-link:hover{
+    color: yellow;
+}
+
+.side-left-nav{
+    position: absolute;
+    left: 1%;
+    top:35%;
+    max-width: 23%;
+    min-width: 23%;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+
+}
+.side-left-nav h3{
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: white;
+    background-color: rgb(11, 11, 90);
+    font-family:  'Roboto', sans-serif;
+    padding: 2mm 0 2mm 0mm;
+    border: black 1px;
+    border-bottom:black 1px solid ;
+   
+}
+.side-left-nav a{
+    text-decoration: none;
+    margin: 3mm ;
+}
+.ref2:hover, .contact-us a:hover{
+    color:white;
+    background-color: rgb(13, 11, 133);
+}
+.news-feeds{
+    font-size:0.8em ;
+    background-color: transparent;
+    margin-bottom: 1mm;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ 
+}
+
+.news-feeds a{
+    color:#0f6333;
+
+    
+}
+.news-feeds a:hover{
+    color: blue;
+}
+.ref1{
+    margin-top: 2mm;
+    margin-bottom: 2mm;
+}
+.ref2{
+    background-color:transparent;
+    color:rgba(105, 104, 104, 0.548);
+    font-family: 'Roboto', sans-serif;
+    border-bottom: solid rgb(255, 255, 255) 1px;
+}
+
+.ref2 span{
+    font-family: 'Roboto', sans-serif;
+}
+.contact-us{
+    background-color: transparent;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.contact-us h3{
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+}
+.contact-us a{
+    font-size: 1.2em;
+    color: rgb(23, 13, 109);
+    
+}
+
+
+
+
+
+                                                /* center bar */
+
+                                                
+.center-nav{
+    position: absolute;
+    top: 99%;
+    left: 25%;
+    width: 50%;
+    display: grid;
+    padding: 0.3em;
+    grid-template-columns: auto auto;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+} 
+
+.center-nav2{
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    display: grid;
+    padding: 0.3em;
+    grid-template-columns: auto auto;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+} 
+.mySlides {display:none;
+    width: 48.5vw;
+    height: 49vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    
+}
+h1{
+
+    position: absolute;
+    left: 50%;
+    top: 92%;
+    transform: translate(-50%,-50%);
+    font-family: 'Roboto', sans-serif;
+    z-index: 1;
+    color: rgb(21, 64, 128);
+    text-shadow: 2px 2px 4px #000000;;
+}          
+.center-nav a{
+    text-decoration: none;
+    padding: 1em;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    width: auto;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+
+}    
+.home{
+    color: white;
+    font-size:1.2em ;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    text-align: center;
+} 
+   
+.home a{
+    text-decoration: none;
+    color: white;
+    padding: 1em;
+    text-transform:capitalize;
+}
+.home a:hover{
+    color:yellow;
+}
+
+.book-app,.book-lab,.doct-at-door,.hom-tel,.yoga,.gym, .dauw {
+    color:#0f6333;
+    background-image: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    text-transform:capitalize;
+    font-size: 1.1em;
+}
+
+
+
+
+.book-app:hover,.book-lab:hover,.doct-at-door:hover,.hom-tel:hover,.yoga:hover ,.gym:hover , .dauw:hover {
+    color: white;
+    background-color:rgb(27, 9, 110); ;
+}
+
+
+
+/* side right navbar */
+
+.side-right-nav{
+    position: absolute;
+    right: 1%;
+    width: 22%;
+    border-radius: 5px;
+    top: 35%;
+    text-align: center;
+    background-color: transparent;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.side-right-nav a{
+    text-decoration: none;
+    color:rgb(11, 11, 102);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    
+
+}
+.side-right-nav h2{
+    text-decoration: none;
+    font-size: 1em;
+    color:#0f6333;
+    padding-top: 0.3cm;
+    padding-bottom: 0.3cm;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    
+
+}
+.ref a:hover{
+    color: white;
+    background-color:rgb(11, 11, 102);
+}
+.ref{
+    width: 100%;
+    color:black;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    text-transform: capitalize;
+
+    
+}
+.side-right-nav h2:hover{
+    color: white;
+    background-color:rgb(11, 11, 102);
+}
+ 
+
+
+@media only screen and (max-width:900px){
+   
+    .center-nav,.center-nav2{
+        left: 30%;
+        width: 44%;
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .nav-link{
+        width: 25%;
+        padding:0.2cm 0.2cm 0.2cm 0.2cm;
+        font-size: 0.8em;
+    }
+    
+
+.center-nav2{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 46%;
+    height: 45%;
+    display: grid;
+    padding: 0.3em;
+    grid-template-columns: auto auto;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+} 
+.mySlides {display:none;
+    width: 44vw;
+    height: 43vh;
+    
+}
+
+
+}
+
+/* htc.html styling  */
+.allform{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 120%;
+    width: 70%;
+    padding:0.5cm;
+    background-color: wheat;
+    box-shadow: 0 1px 6px rgba(255, 255, 255, 0.589), 0 1px 4px rgba(255, 255, 255, 0.24);;
+}
+.zoom_form{
+    background-color: transparent;
+    text-align: center;
+    padding: 0.5cm;
+    width: 60%;
+    margin-left: 19%;
+}
+.zoom_form img{
+    width: 4em;
+}
+.zoom_form input,select,label{
+    font-size: 1.4em;
+    border-top:0 ;
+    border-bottom: solid black 1px;
+    border-left: 0;
+    border-right: 0;
+    margin: 1em 0 1em 0;
+    width: 100%;
+}
+.zoom_form button{
+    color: white;
+    background-color: rgb(42, 153, 243);
+    padding: 0.2cm;
+    font-size: 1.2em;
+    border:solid 1px;
+    border-radius: 10px;
+}
+.zoom_form button:hover{
+    opacity: 0.7;
+}
+
+.allform1{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 140%;
+    width: 70%;
+    padding:0.5cm;
+    background-color: wheat;
+    box-shadow: 0 1px 6px rgba(255, 255, 255, 0.589), 0 1px 4px rgba(255, 255, 255, 0.24);;
+}
+
+.appointment{
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 10%;
+    top: 30%;
+    font-size: 3em;
+    text-decoration: underline;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

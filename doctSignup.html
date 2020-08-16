@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+    <script src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="signup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samchikitsa Signup</title>
+</head>
+<body>
+
+<div class="PC">  
+    <img class="avatar" src="avatar.png" alt="" srcset="">  
+        <div class="account-detail">
+            <div class="account-detail-content"><a href="#">My Profile</a></div>
+            <div class="account-detail-content"><a href="#">Edit User</a></div>
+            <div class="account-detail-content"><a href="#">Settings</a></div>
+        </div>   
+    <div class="header">
+        <div class="brand"><img class="brand-img" src="logo.png" alt="logo"></div>
+        <div class="sam-title">
+        <h3> SAMCHIKITSA </h3>
+        <b id="btext"></b>
+        </div>
+    </div>
+        <nav>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="about.html" >About Us</a>
+            <a class="nav-link" href="testimonial.html">Testemonials</a>
+            <a class="nav-link" href="us.html">Upcoming Services</a>
+            <a class="nav-link active" href="#" >Join Us</a>
+            
+        </nav>
+    </div>
+
+
+
+<!--BLOCK CONTENT-->
+
+    <div class="signup-grid-container">
+        <div class="gridcontent1">
+            <h3>Login as doctor</h3>
+            <div id="formcontainer-signup">
+                <div id="header"></div>
+                <input type="email" name="email" id="email" placeholder="Enter Valid Email ID" required><br>
+                <input type="password" name="password" id="password" placeholder="Enter Password" required><br>
+                <button onclick="signIn()" id="logIn">Login</button><br>
+            </div>
+        </div>
+    
+        <div class="gridcontent2"> 
+            <h3>SignUp As Doctor</h3>           
+            <div id="formcontainer-signup">
+                <input type="email" name="email" id="email" placeholder="Enter Valid Email ID" required><br>
+                <input type="password" name="password" id="password" placeholder="Create Password" required><br>
+                <input type="text" name="name" id="name" placeholder="Dr./Mr. | --- " required><br>
+                <input type="date" name="DOB" id="DOB"  required><br>
+                <select name="Qualification" id="Qualification" required>
+                    <option value="select">---select----</option>
+                    <option value="bhms">BHMS</option>
+                    <option value="dhms">DHMS</option>
+                    <option value="bms">BMS</option>
+                </select><br>
+                <input type="text" name="college" id="college" placeholder="College | Institute" required><br>
+                <input type="text" name="YC" id="YC" placeholder="Year of completion" required><br>
+                <input type="text" name="RN" id="RN" placeholder="Registration Number " required><br>
+                <input type="text" name="RC" id="RC" placeholder="Registration Council" required><br>
+                <input type="text" name="RY" id="RY" placeholder="Registration Year" required><br>
+                <button onclick="signUp()" id="logIn">SignUp</button><br>
+                
+            </div>
+        </div>
+    </div>
+            
+<script>
+        var i = 0;
+        var txt = 'Serving Complete Health & Well Being';
+        var speed = 50;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("btext").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+
+    function myfunction(){
+        var a = document.getElementById("menubar-content");
+        var b = document.getElementById("services");
+        var c = document.getElementById("contact-menubar-content")
+        if(a.style.display == "none"){
+            a.style.display = "block";
+            b.style.display="none";
+            c.style.display = "none"
+        }
+        else{
+            a.style.display = "none";
+            b.style.display = "block";
+        }
+
+    }
+
+    function myfunction1(){
+        var a = document.getElementById("contact-menubar-content");
+        var b = document.getElementById("services");
+        var c = document.getElementById("menubar-content")
+    
+        if(a.style.display == "none"){
+            a.style.display = "block";
+            b.style.display="none";
+            c.style.display="none";
+        }
+        else{
+            a.style.display = "none";
+            b.style.display = "none";
+            c.style.display="block";
+        }
+
+    }
+
+
+</script>
+</body>
+</html>
+
