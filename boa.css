@@ -1,8 +1,7 @@
 .signup-grid-container{
-    position: absolute;
+    position: relative;
     width: 94vw;
     left: 3vw;
-    top: 40vh;
     display: grid;
     grid-template-columns: auto auto;
 
@@ -20,10 +19,13 @@
 #services-new:hover + #services-hover{
     display: inline-block;
 }
+.head{
+    display: grid;
+    grid-template-columns:15vw 85vw ;
+}
 #switch{
-    position: absolute;
-    left: 1em;
-    top: 35vh;
+    position: relative;
+    margin: 1em;
     padding: 0.3em;
     text-transform: capitalize;
     background-color:tomato;
@@ -39,9 +41,8 @@
     background-color: rgb(7, 6, 87);
 }
 #appointment{
-    text-align: center;
-    margin-top: 1em;
-    margin-bottom: 1cm;
+    margin-left:20vw ;
+    margin-top: 0.5em;
     color: rgb(7, 6, 87);
     font-family: 'Roboto', sans-serif;
     font-size: 2em;
@@ -123,7 +124,7 @@
 
 
 .signup-grid-container1{
-    position: absolute;
+    position: relative;
     width: 80vw;
     left: 8vw;
 }
@@ -175,7 +176,7 @@
 }
 
 #formcontainer-bmi, #formcontainer-bmi-feet, #formcontainer-bmi-meter{
-    position: absolute;
+    position: relative;
     right:-10%;
     top: 10vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -183,7 +184,7 @@
 }
 
 #cbutton{
-    position: absolute;
+    position: relative;
     right: -10%;
     top: 25%;   
 }
@@ -203,7 +204,7 @@
 }
 
 .blogs{
-    position: absolute;
+    position: relative;
     left: 1%;
     top: 40%;
     width: 60%;
@@ -242,6 +243,14 @@
     }
     #switch{
         font-size: 1em;
+    }
+    .signup-grid-container{
+        position: relative;
+        width: 94vw;
+        left: 3vw;
+        display: grid;
+        grid-template-columns: auto;
+    
     }
     }
 

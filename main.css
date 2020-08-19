@@ -4,15 +4,23 @@
 .mobile{
     display: none;
 }
+.PC{
+    min-height: 100%;
+    position: relative;
+}
 body{
     background-color:whitesmoke ;
+    width: 100%;
+    height:100% ;
 }
+
 .header{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 40vw 50vw 10vw;
     width: 100%;
     background-color: rgb(240, 242, 247);
-    height: 30vh;
+    margin-bottom: 1em;
+
 }
 .brand{
     text-align: right;
@@ -22,7 +30,7 @@ body{
 .sam-title{
     margin-top: 1em;
     padding-left: 1em;
-    text-align: left;
+    text-align: left;   
 }
 .brand-img{
     width: 3.5cm;
@@ -31,6 +39,7 @@ body{
 .header h3{
     font-size: 3.8em;
     color: tomato;
+    text-shadow: 2px 2px 4px #000000;
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
@@ -40,35 +49,29 @@ body{
     background-color: rgb(11, 11, 90);
     padding:0 .5cm 0.1cm .5cm;
     font-family: 'Barlow Semi Condensed', sans-serif;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 
 }
-
-nav{
-    position: absolute;
-    width: 100%;
-    background-color:rgb(27, 9, 110);
-    left:;
-    top: 28%;
+.account{
+    min-width: 10%;
     text-align: center;
-    padding:0.5%;
 }
+
 .avatar{
-    position: absolute;
-    right: 5%;
-    top: 8%;
+    margin-top:3em ;
     width: 60px;
     height: 60px;
+    margin-right:1em ;
     border-radius: 50%;
 
 }
 .account-detail{
     display: none;
-    position: absolute;
-    right: 7%;
-    top: 15%;
-    width: auto;
+    width: 10vw;
     background-color: white;
-    
+    margin-top:-1em ;
+    margin-left:-2em ;
+
     box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
     border-radius: 5px;
     z-index: 1;
@@ -92,6 +95,12 @@ nav{
     display: block;
 
 
+}
+nav{
+    width: 100%;
+    background-color:rgb(27, 9, 110);
+    text-align: center;
+    padding:0.5%;
 }
 .nav-link{
     color: white;
@@ -117,12 +126,13 @@ nav{
     color: yellow;
 }
 
+.block{
+    display: grid;
+    grid-template-columns: 23vw 52vw 23vw;
+}
+
 .side-left-nav{
-    position: absolute;
-    left: 1%;
-    top:35%;
-    max-width: 23%;
-    min-width: 23%;
+    margin: 0.3em;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
 
@@ -204,10 +214,7 @@ nav{
 
                                                 
 .center-nav{
-    position: absolute;
-    top: 99%;
-    left: 25%;
-    width: 50%;
+    margin: 0.5em;
     display: grid;
     padding: 0.3em;
     grid-template-columns: auto auto;
@@ -218,11 +225,8 @@ nav{
 } 
 
 .center-nav2{
-    position: absolute;
-    top: 35%;
-    left: 25%;
-    width: 50%;
-    height: 50%;
+    margin: 0.5em;
+    max-height: 50vh;
     display: grid;
     padding: 0.3em;
     grid-template-columns: auto auto;
@@ -232,22 +236,19 @@ nav{
     
 } 
 .mySlides {display:none;
-    width: 48.5vw;
+    width: 50vw;
     height: 49vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 8px;
     
 }
-h1{
-
-    position: absolute;
-    left: 50%;
-    top: 92%;
-    transform: translate(-50%,-50%);
+#h1{
+    text-align: center;
+    margin-top: 1em;
     font-family: 'Roboto', sans-serif;
     z-index: 1;
     color: rgb(21, 64, 128);
-    text-shadow: 2px 2px 4px #000000;;
+    text-shadow: 2px 2px 4px #000000;
 }          
 .center-nav a{
     text-decoration: none;
@@ -302,11 +303,10 @@ h1{
 /* side right navbar */
 
 .side-right-nav{
-    position: absolute;
-    right: 1%;
-    width: 22%;
+    margin-top: 1em;
+    height: 40vh;
+    margin: 0.3em;
     border-radius: 5px;
-    top: 35%;
     text-align: center;
     background-color: transparent;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -315,6 +315,7 @@ h1{
 
 .side-right-nav a{
     text-decoration: none;
+
     color:rgb(11, 11, 102);
     font-family: 'Barlow Semi Condensed', sans-serif;
     
@@ -346,53 +347,60 @@ h1{
     color: white;
     background-color:rgb(11, 11, 102);
 }
- 
+.footer-main{
+    background-color:rgb(27, 9, 110);
+    padding-bottom:1em ;
+    margin-top: 2em;
 
 
-@media only screen and (max-width:900px){
-   
-    .center-nav,.center-nav2{
-        left: 30%;
-        width: 44%;
-        display: grid;
-        grid-template-columns: auto;
-    }
-    .nav-link{
-        width: 25%;
-        padding:0.2cm 0.2cm 0.2cm 0.2cm;
-        font-size: 0.8em;
-    }
-    
-
-.center-nav2{
-    position: absolute;
-    top: 30%;
-    left: 30%;
-    width: 46%;
-    height: 45%;
-    display: grid;
-    padding: 0.3em;
-    grid-template-columns: auto auto;
-    background-color: transparent;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    
-} 
-.mySlides {display:none;
-    width: 44vw;
-    height: 43vh;
-    
 }
+.footer{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    color:white;
+    width: 100%;
+    height: auto;
+    padding-top: 1em;
+}
+.footer-content{
+    margin-bottom: 1em;
+}
+.footer strong, #footer-link{
+    color: white;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin-left: 1em;
+    font-family: 'Alata', sans-serif;
 
 
+}
+#footer-link:hover{
+    color: rgb(92, 240, 92);
+}
+.footer-img{
+    width: 100vw;
+    text-align:center;
+
+
+}
+.footer-img h1{
+    font-size: 3.8em;
+    color: tomato;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px #000000;
+  
+}
+.footer-img p{
+    text-align: center;
+    color: white;
+    margin-top: 1em;
+    margin-bottom:1em ;
 }
 
 /* htc.html styling  */
 .allform{
-    position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
-    top: 120%;
+    position: relative;
     width: 70%;
     padding:0.5cm;
     background-color: wheat;
@@ -449,4 +457,134 @@ h1{
     font-size: 3em;
     text-decoration: underline;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.disclaimer, .pp{
+    width: 90vw;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: white;
+    margin-top: 1em ;
+    padding: 1em;
+   
+}
+.disclaimer h4, .pp h4{
+    color:rgb(27, 9, 110);;
+    text-align:;
+    margin: 0.4em;
+    font-size:1.5em;
+    text-transform: uppercase;
+    font-family:'Barlow Semi Condensed', sans-serif; ;
+}
+.disclaimer p, .pp p{
+    font-size: 1em;
+    color: green;
+    margin: 0.3em;
+
+}
+
+@media only screen and (max-width:900px){
+    .block{
+        grid-template-columns: 38vw 60vw;
+    }
+    .header{
+        grid-template-columns: 27vw 55vw 18vw;
+    }
+    .nav-link{
+        padding:0.2cm 0.1cm 0.2cm 0.1cm;
+    text-align: center;
+    font-size: 1em;
+    }
+    .mySlides {
+        width: 56vw;
+        }
+}
+
+@media only screen and (max-width:600px){
+    .block{
+        grid-template-columns: 100vw;
+        margin: 0;
+    }
+    .header{
+        grid-template-columns: 25vw auto 18vw;
+
+    }
+    .nav-link{
+        padding:0.2cm 0.1cm 0.2cm 0.1cm;
+    text-align: center;
+    font-size: 0.8em;
+    }
+    .mySlides {
+        width: 93vw;
+        height: 28vh;
+        }
+        .center-nav{
+            height: auto;
+        }
+        .center-nav2{
+            height: auto;
+            font-size: 1.2em;
+        }
+        .footer{
+            grid-template-columns:50vw 50vw;
+            text-align:;
+        }
+        .footer-img h1{
+            font-size: 2.8em;}
+        
+        nav{
+            
+        }
+        .side-left-nav{
+            display: none;
+        }
+        
+.brand{
+    text-align: right;
+    padding-right: 0.2em;
+    margin-top: 2em;
+}
+.sam-title{
+    margin-top: 2em;
+    padding-left: 1em;
+    text-align: left;   
+}
+.brand-img{
+    width: 2cm;
+    height: 2cm;
+}
+.header h3{
+    font-size: 2.2em;
+    color: tomato;
+    text-shadow: 2px 2px 4px #000000;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.header b{
+    font-size:0.74em;
+    color:white;
+    background-color: rgb(11, 11, 90);
+    padding:0 .2cm 0.1cm .2cm;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+
+}
+.account{
+    min-width: 10%;
+    text-align: center;
+}
+
+.avatar{
+    margin-top:4em ;
+    width: 40px;
+    height: 40px;
+    margin-right:1em ;
+    border-radius: 50%;
+
+}
+.center-nav a{
+    margin: 0.3em;
+    padding: 0.3em;
+}
 }
