@@ -1,21 +1,21 @@
 .signup-grid-container{
-    position: absolute;
+    position: relative;
+    display: grid;
+    grid-template-columns: 30vw auto;
     width: 94vw;
-    left: 3vw;
-    top: 35vh;
+    margin-left: 3vw;
+    margin-top: 1em;
 
 }
 
 .gridcontent1{
-    position: absolute;
-    width: 30vw;
+    margin-top: 1em;
+    text-align:;
     
 }
 
 .gridcontent2{
-    position: absolute;
-    width: 50vw;
-    left: 35vw;
+    position: relative;
     border-left: solid rgb(114, 113, 113) 1px;
     
 }
@@ -33,7 +33,8 @@
 
 
 #google-button, #fb{
-    width: 27vw;
+    min-width: 27vw;
+    text-align: center;
     margin: 0.4em;
     padding: 0.3em;
     font-size: 1.2em;
@@ -84,7 +85,8 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 0.5em;
     background-color: transparent;
-    margin-left: 1em;
+    margin-left: 0.5em;
+    margin-right:0.5em ;
     border-radius: 7px;
 }
 
@@ -103,3 +105,14 @@
     margin-left: 0cm;
 }
 }
+@media only screen and (max-width:600px){
+    .signup-grid-container{
+        position: relative;
+        display: grid;
+        grid-template-columns: 90vw;
+        width: 94vw;
+        margin-left: 3vw;
+        margin-top: 1em;
+    
+    }
+    }
