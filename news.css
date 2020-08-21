@@ -1,0 +1,32 @@
+.news{
+    margin: 1em;
+    padding: 1em;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.news h1{
+    font-family: roboto;
+    text-align: center;
+}
+
+.news-content{
+    width: 70vw;
+    margin: auto;
+
+
+}
+
+.news-content a{
+
+    color: rgb(2, 2, 112);
+    font-size: 2em;
+    padding: 1em;
+    text-decoration: none;
+}
+.a-content{
+    margin-top:1em;
+    margin-bottom: 1em;
+}
+.news-content a:hover{
+    color: tomato;
+}

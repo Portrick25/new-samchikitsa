@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="mental.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samchikitsa</title>
+</head>
+<body>
+
+    <div class="PC">
+        <div class="header">
+            <div class="brand"><img class="brand-img" src="logo.png" alt="logo"></div>
+            <div class="sam-title">
+                <h3> SAMCHIKITSA </h3>
+                <div style="margin-top: -1.2em;">
+                <b id="btext"></b>
+            </div>
+            </div>
+            <div class="account">
+                <img class="avatar" src="avatar.png" alt="" srcset="">  
+                <div class="account-detail">
+                    <div class="account-detail-content"><a href="#">My Profile</a></div>
+                    <div class="account-detail-content"><a href="#">Edit User</a></div>
+                    <div class="account-detail-content"><a href="#">Settings</a></div>
+                </div>  
+            </div>
+        </div>
+            <nav>
+                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link " href="about.html" >About Us</a>
+                <a class="nav-link" href="testimonial.html">Testemonials</a>
+                <a class="nav-link" href="us.html">Upcoming Services</a>
+                <a class="nav-link" href="signup.html">Login</a>
+
+                
+            </nav>
+            <div class="mental">
+                <h1>Mental health Consultation</h1>
+                <p>"A small joy, a big stress, 
+                    everything you must express. 
+                    
+                    Your feelings are valid. 
+                    Don't stay silent. Talk, share, express.
+                    We are here to listen to you. 
+                    0 judgements. 100% confidential. 
+                    At Samchikitsa, your Mental Health is our priority.
+                    "</p>
+                <div class="mental-content">
+                    <a class="mental-nav">
+                        <div class="mental-img"> <img src="talk-icon.png" alt="" srcset=""></div>
+                        <h3>talk with psychologist</h3>
+                    </a>
+                    <a class="mental-nav">
+                        <div class="mental-img"> <img src="arttherapy.png" alt="" srcset=""></div>
+                        <h3>art & creativity based mental health therapies</h3>
+                    </a>
+                    <a class="mental-nav">
+                        <div class="mental-img"> <img src="consult.png" alt="" srcset=""></div>
+                        <h3>consult with homeopathoc physicians</h3>
+                    </a>
+                    <a class="mental-nav">
+                        <div class="mental-img"> <img src="awareness.png" alt="" srcset=""></div>
+                        <h3>mental health awareness programs</h3>
+                    </a>
+                </div>
+            </div>
+<div class="footer-main">
+            <div class="footer">
+                <div class="footer-content">
+                    <strong>Samchikitsa</strong><br>
+                    <a id="footer-link" href="#">about</a><br>
+                    <a id="footer-link" href="#">blog</a><br>
+                    <a id="footer-link" href="#"> corners</a><br>
+                    <a id="footer-link" href="info@samchikitsa.com">support 24X7</a><br>
+                </div>
+                <div class="footer-content">
+                    <strong>for patients</strong><br>
+                    <a id="footer-link" href="#">search for doctors</a><br>
+                    <a id="footer-link" href="#">health articles</a><br>
+                    <a id="footer-link" href="#">consult a doctor</a><br>
+                    <a id="footer-link" href="#">book a lab test</a><br>
+                    <a id="footer-link" href="#">offline appointment</a><br>
+                    <a id="footer-link" href="#">subscriptions</a><br>
+                </div>
+                <div class="footer-content">
+                    <strong>for homeopathic doctors</strong><br>
+                    <a id="footer-link" href="#">join samchikitsa</a><br>
+                    <a id="footer-link" href="#">share your cases</a><br>
+                </div>
+                <div class="footer-content">
+                    <strong>social</strong><br>
+                    <a id="footer-link" href="#">Facebook</a><br>
+                    <a id="footer-link" href="#">Instagram</a><br>
+                    <a id="footer-link" href="#">Twitter</a><br>
+                    <a id="footer-link" href="#">Linkedin</a><br>
+                </div>
+                <div class="footer-content">
+                    <strong>more</strong><br>
+                    <a id="footer-link" href="#">privacy & policies</a><br>
+                    <a id="footer-link" href="#">terms and conditions</a><br>
+                </div>
+            </div>
+            <div class="footer-img">
+                <h1>samchikitsa</h1>
+                <p>Copyright &copy; 2020. All rights reserved</p>
+
+            </div>
+        </div>
+
+</div>
+   <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+    <script>
+
+        var i = 0;
+        var txt = 'Serving Complete Health & Well Being';
+        var speed = 50;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("btext").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        typeWriter();
+
+        var myIndex = 0;
+        carousel();
+        
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 5000); // Change image every 2 seconds
+        }
+    </script>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+        
+        function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "block";  
+        }
+    </script>
+</body>
+</html>
+
